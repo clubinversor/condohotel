@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Casa Que Mereces</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .main-title {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .highlight-text {
+            color: green;
+            text-decoration: underline;
+        }
+        .sub-title {
+            font-size: 20px;
+            color: red;
+            margin: 10px 0;
+        }
+        .image-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .circle-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #ccc;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .circle-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .arrow-image {
+            width: 40px;
+        }
+        .investment-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            flex-wrap: wrap;
+        }
+        .investment-section img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .investment-text {
+            max-width: 450px;
+            padding: 10px;
+        }
+        .investment-text h2 {
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .investment-text ul {
+            list-style: none;
+            padding: 0;
+            font-size: 18px;
+        }
+        .investment-text li {
+            margin: 10px 0;
+        }
+        .blue-text { color: #007bff; font-weight: bold; }
+        .green-text { color: #28a745; font-weight: bold; }
+        .orange-text { color: #ff9800; font-weight: bold; }
+
+        /* NUEVA SECCIÓN: CEO */
+        .ceo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            flex-wrap: wrap;
+        }
+        .ceo-text {
+            max-width: 450px;
+        }
+        .ceo-text h2 {
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .ceo-text ul {
+            list-style: none;
+            padding: 0;
+            font-size: 18px;
+        }
+        .ceo-text li {
+            margin: 10px 0;
+        }
+        .ceo-image {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .image-section {
+                flex-direction: column;
+            }
+            .arrow-image {
+                transform: rotate(90deg);
+            }
+            .investment-section, .ceo-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .investment-text, .ceo-text {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 22px;
+            }
+            .sub-title {
+                font-size: 18px;
+            }
+            .circle-image {
+                width: 100px;
+                height: 100px;
+            }
+            .arrow-image {
+                width: 30px;
+            }
+            .investment-text h2, .ceo-text h2 {
+                font-size: 22px;
+            }
+            .investment-text ul, .ceo-text ul {
+                font-size: 16px;
+            }
+        }
+
+        .formularioinstant {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    text-align: center;
+    margin: 40px auto;
+}
+        .pregunta {
+            display: none;
+        }
+        .pregunta.active {
+            display: block;
+        }
+        .opcion {
+            padding: 10px;
+            margin: 5px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        i {
+            color: #FCC857
+        }
+    </style>
+</head>
+<body>
+    <p class="main-title">¿Quieres Conseguir <span class="highlight-text">La Casa Que Mereces</span>?</p>
+    <p class="sub-title">En Menos de 2 años</p>
+    <div class="image-section">
+        <div class="circle-image">
+            <img src="https://i.postimg.cc/5NdKV6Rm/hotel.png" alt="Hotel">
+        </div>
+        <img src="https://i.postimg.cc/zGqdy45b/flecha.png" alt="Flecha" class="arrow-image">
+        <div class="circle-image">
+            <img src="https://i.postimg.cc/K8Q0BQv9/habitacion.png" alt="Habitación">
+        </div>
+    </div>
+    <div class="investment-section">
+        <img src="https://i.postimg.cc/QMXRrHVz/download-2.webp" alt="Condo Hotel">
+        <div class="investment-text">
+            <h2>Invierte en Condo Hoteles</h2>
+            <ul>
+                <li>• Obtén una <span class="blue-text">renta mensual</span> de por vida entre <span class="green-text">1.000€ - 3.000€</span> al mes.</li>
+                <li>• Disfruta de la estancia en el complejo hasta 60 días al año.</li>
+                <li>• <span class="orange-text">Intercambia tu habitación</span> por otra a nivel mundial.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="formularioinstant">
+        <form id="form">
+            <h2 class="main-title">RESPONDE AHORA Y OBTÉN UNA LLAMADA INFORMATIVA CON NUESTRO EQUIPO EXPERTO</h2>
+            <div class="pregunta active">
+                <label>¿Has pagado ya tu hipoteca?</label>
+                <div class="opcion" data-next>Si</div>
+                <div class="opcion" data-next>No</div>
+            </div>
+            <div class="pregunta">
+                <label>¿Qué banco o caja tienes?</label>
+                <div class="opcion" data-next>BBVA</div>
+                <div class="opcion" data-next>Santander</div>
+                <div class="opcion" data-next>Caixa</div>
+                <div class="opcion" data-next>Otro</div>
+            </div>
+            <div class="pregunta">
+                <label>¿Cuál es el importe de tu hipoteca?</label>
+                <input type="text">
+                <button type="button" id="siguiente">Siguiente</button>
+            </div>
+            <div class="pregunta">
+                <label>¿De qué fecha es tu hipoteca?</label>
+                <input type="text">
+                <button type="button" id="finalizar">Finalizar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- NUEVA SECCIÓN CEO -->
+    <div class="ceo-section">
+        <div class="ceo-text">
+            <h2>Bianca</h2>
+            <ul>
+                <li>• CEO de Club Inversor</li>
+                <li>• Hemos combinado lo mejor de dos mundos: La propiedad inmobiliaria: cada inversor adquiere una habitación o departamento dentro del hotel, obteniendo el título de propiedad.</li>
+            </ul>
+        </div>
+        <img class="ceo-image" src="https://i.postimg.cc/kGnc2bPr/download-52.jpg" alt="Bianca">
+    </div>
+
+    <script>
+        let preguntas = document.querySelectorAll(".pregunta");
+    let indice = 0;
+    let opciones = document.querySelectorAll(".opcion");
+    let siguienteBtn = document.getElementById("siguiente");
+    let finalizarBtn = document.getElementById("finalizar");
+
+    opciones.forEach(opcion => {
+        opcion.addEventListener("click", function() {
+            avanzarPregunta();
+        });
+    });
+
+    if (siguienteBtn) {
+        siguienteBtn.addEventListener("click", avanzarPregunta);
+    }
+    
+    if (finalizarBtn) {
+        finalizarBtn.addEventListener("click", function() {
+            alert("Formulario completado");
+        });
+    }
+
+    function avanzarPregunta() {
+        if (indice < preguntas.length - 1) {
+            preguntas[indice].classList.remove("active");
+            indice++;
+            preguntas[indice].classList.add("active");
+        } else {
+            alert("Formulario completado");
+        }
+    }
+    </script>
+</body>
+</html>
