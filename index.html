@@ -217,7 +217,7 @@
         <div class="investment-text">
             <h2>Invierte en Condo Hoteles</h2>
             <ul>
-                <li>• Obtén una <span class="blue-text">renta mensual</span> de por vida entre <span class="green-text">1.000€ - 3.000€</span> al mes.</li>
+                <li>• Obtén una <span class="blue-text">renta anual</span> de por vida entre <span class="green-text">8%-25% anual</span> .</li>
                 <li>• Disfruta de la estancia en el complejo hasta 60 días al año.</li>
                 <li>• <span class="orange-text">Intercambia tu habitación</span> por otra a nivel mundial.</li>
             </ul>
@@ -225,32 +225,29 @@
     </div>
 
 
+    
+
     <div class="formularioinstant">
-        <form id="form">
-            <h2 class="main-title">RESPONDE AHORA Y OBTÉN UNA LLAMADA INFORMATIVA CON NUESTRO EQUIPO EXPERTO</h2>
-            <div class="pregunta active">
-                <label>¿Has pagado ya tu hipoteca?</label>
-                <div class="opcion" data-next>Si</div>
-                <div class="opcion" data-next>No</div>
-            </div>
-            <div class="pregunta">
-                <label>¿Qué banco o caja tienes?</label>
-                <div class="opcion" data-next>BBVA</div>
-                <div class="opcion" data-next>Santander</div>
-                <div class="opcion" data-next>Caixa</div>
-                <div class="opcion" data-next>Otro</div>
-            </div>
-            <div class="pregunta">
-                <label>¿Cuál es el importe de tu hipoteca?</label>
-                <input type="text">
-                <button type="button" id="siguiente">Siguiente</button>
-            </div>
-            <div class="pregunta">
-                <label>¿De qué fecha es tu hipoteca?</label>
-                <input type="text">
-                <button type="button" id="finalizar">Finalizar</button>
-            </div>
-        </form>
+        <iframe
+  src="https://links.bitlyesp.com/widget/form/8EnKzB8cOF3VHn45hgXN"
+  style="width:100%;height:100%;border:none;border-radius:4px"
+  id="inline-8EnKzB8cOF3VHn45hgXN" 
+  data-layout="{'id':'INLINE'}"
+  data-trigger-type="alwaysShow"
+  data-trigger-value=""
+  data-activation-type="alwaysActivated"
+  data-activation-value=""
+  data-deactivation-type="neverDeactivate"
+  data-deactivation-value=""
+  data-form-name="Formulario Inicial"
+  data-height="461"
+  data-layout-iframe-id="inline-8EnKzB8cOF3VHn45hgXN"
+  data-form-id="8EnKzB8cOF3VHn45hgXN"
+  title="Formulario Inicial"
+      >
+</iframe>
+<script src="https://links.bitlyesp.com/js/form_embed.js"></script>
+           
     </div>
 
     <!-- NUEVA SECCIÓN CEO -->
@@ -266,37 +263,7 @@
     </div>
 
     <script>
-        let preguntas = document.querySelectorAll(".pregunta");
-    let indice = 0;
-    let opciones = document.querySelectorAll(".opcion");
-    let siguienteBtn = document.getElementById("siguiente");
-    let finalizarBtn = document.getElementById("finalizar");
-
-    opciones.forEach(opcion => {
-        opcion.addEventListener("click", function() {
-            avanzarPregunta();
-        });
-    });
-
-    if (siguienteBtn) {
-        siguienteBtn.addEventListener("click", avanzarPregunta);
-    }
-    
-    if (finalizarBtn) {
-        finalizarBtn.addEventListener("click", function() {
-            alert("Formulario completado");
-        });
-    }
-
-    function avanzarPregunta() {
-        if (indice < preguntas.length - 1) {
-            preguntas[indice].classList.remove("active");
-            indice++;
-            preguntas[indice].classList.add("active");
-        } else {
-            alert("Formulario completado");
-        }
-    }
+     
     </script>
 </body>
 </html>
